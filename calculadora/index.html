@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #1b1b1b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .calculadora {
+            background: #2d2d2d;
+            padding: 20px;
+            border-radius: 12px;
+            width: 320px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+        }
+
+        .display {
+            width: 100%;
+            height: 70px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 8px;
+            background: #111;
+            color: #fff;
+            text-align: right;
+            padding: 15px;
+            font-size: 32px;
+        }
+
+        .botoes {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            height: 65px;
+            border: none;
+            border-radius: 8px;
+            font-size: 22px;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        button:hover {
+            opacity: .8;
+        }
+
+        .numero {
+            background: #4b4b4b;
+            color: white;
+        }
+
+        .operador {
+            background: orange;
+            color: white;
+        }
+
+        .limpar {
+            background: #d63031;
+            color: white;
+        }
+
+        .igual {
+            background: #00b894;
+            color: white;
+            grid-column: span 2;
+        }
+
+        .apaga {
+            background: red;
+            color: white;
+            grid-column: span 2;
+        }
+
+        .alinhar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .texto-erro {
+            color: red;
+            opacity: 1;
+            padding-bottom: 1em;
+            min-height: 2.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="alinhar">
+        <span class="texto-erro"></span>
+    </div>
+    <div class="calculadora">
+
+        <input type="text" class="display" readonly value="">
+
+        <div class="botoes">
+            <button class="limpar">C</button>
+            <button class="operador">/</button>
+            <button class="apaga"><i class="fa-solid fa-delete-left"></i></button>
+
+            <button class="numero">7</button>
+            <button class="numero">8</button>
+            <button class="numero">9</button>
+            <button class="operador">*</button>
+
+            <button class="numero">4</button>
+            <button class="numero">5</button>
+            <button class="numero">6</button>
+            <button class="operador">-</button>
+
+            <button class="numero">1</button>
+            <button class="numero">2</button>
+            <button class="numero">3</button>
+            <button class="operador">+</button>
+
+            <button class="numero">0</button>
+            <button class="numero">.</button>
+            <button class="igual">=</button>
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
